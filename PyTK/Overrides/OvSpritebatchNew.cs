@@ -44,7 +44,7 @@ namespace PyTK.Overrides
                 return true;
             }
 
-            if (texture == null || destinationRectangle == null)
+            if (texture == null || texture.IsDisposed || destinationRectangle == null)
                 return false;
 
             sourceRectangle = sourceRectangle.HasValue ? sourceRectangle.Value : new Rectangle(0, 0, texture.Width, texture.Height);
